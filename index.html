@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Smith and Shin</title>
+    <meta name="description" content="Free open source Tailwind CSS Store template">
+    <meta name="keywords" content="tailwind,tailwindcss,tailwind css,css,starter template,free template,store template, shop layout, minimal, monochrome, minimalistic, theme, nordic">
+    
+    <link rel="stylesheet" href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css"/>
+	
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:200,400&display=swap" rel="stylesheet">
+
+    <style>
+        .work-sans {
+            font-family: 'Work Sans', sans-serif;
+        }
+                
+        #menu-toggle:checked + #menu {
+            display: block;
+        }
+        
+        .hover\:grow {
+            transition: all 0.3s;
+            transform: scale(1);
+        }
+        
+        .hover\:grow:hover {
+            transform: scale(1.02);
+        }
+        
+        .carousel-open:checked + .carousel-item {
+            position: static;
+            opacity: 100;
+        }
+        
+        .carousel-item {
+            -webkit-transition: opacity 0.6s ease-out;
+            transition: opacity 0.6s ease-out;
+        }
+        
+        #carousel-1:checked ~ .control-1,
+        #carousel-2:checked ~ .control-2,
+        #carousel-3:checked ~ .control-3 {
+            display: block;
+        }
+        
+        .carousel-indicators {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            position: absolute;
+            bottom: 2%;
+            left: 0;
+            right: 0;
+            text-align: center;
+            z-index: 10;
+        }
+        
+        #carousel-1:checked ~ .control-1 ~ .carousel-indicators li:nth-child(1) .carousel-bullet,
+        #carousel-2:checked ~ .control-2 ~ .carousel-indicators li:nth-child(2) .carousel-bullet,
+        #carousel-3:checked ~ .control-3 ~ .carousel-indicators li:nth-child(3) .carousel-bullet {
+            color: #000;
+            /*Set to match the Tailwind colour you want the active one to be */
+        }
+    </style>
+
+</head>
+
+<body class="bg-white text-gray-600 work-sans leading-normal text-base tracking-normal">
+
+    <!--Nav-->
+    <nav id="header" class="w-full z-30 top-0 py-1">
+        <div class="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 px-6 py-3">
+    
+            <label for="menu-toggle" class="cursor-pointer md:hidden block">
+                <svg class="fill-current text-gray-900" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+                    <title>menu</title>
+                    <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
+                </svg>
+            </label>
+            <input class="hidden" type="checkbox" id="menu-toggle" />
+    
+            <div class="hidden md:flex md:items-center md:w-auto w-full order-3 md:order-1" id="menu">
+                <nav>
+                    <ul class="md:flex items-center justify-between text-base text-gray-700 pt-4 md:pt-0">
+                        <li><a class="inline-block no-underline hover:text-black hover:underline py-2 px-4" href="index.html">Home</a></li>
+                        <li><a class="inline-block no-underline hover:text-black hover:underline py-2 px-4" href="services.html">Services</a></li>
+                        <li><a class="inline-block no-underline hover:text-black hover:underline py-2 px-4" href="tax_tips.html">Tax Tips</a></li>
+                    </ul>
+                </nav>
+            </div>
+    
+            <div class="order-2 md:order-2 mx-auto">
+                <a class="flex items-center tracking-wide no-underline hover:no-underline font-bold text-gray-800 text-xl " href="#">
+                    Smith and Shin CPAs, LLC
+                </a>
+            </div>
+    
+        </div>
+    </nav>
+
+
+<section class="w-full mx-auto bg-nordic-gray-light flex pt-12 md:pt-0 md:items-center bg-cover bg-right" style="max-width:1600px; height: 32rem; background-image: url(Screenshot\ 2023-05-15\ at\ 11.46.16\ AM.png);">
+
+	<div class="container mx-auto">
+
+		<div class="container mx-auto">
+            <div class="flex flex-col w-full lg:w-1/2 md:ml-16 items-center md:items-start px-6 tracking-wide">
+                <p class="text-white text-2xl my-4">4501 Old Spartanburg Road</p>
+                <p class="text-xl inline-block leading-relaxed text-white hover:border-white">Taylors, SC 29687</p>
+            </div>
+        </div>
+
+	  </div>
+
+</section>
+
+    <section class="bg-white py-8">
+
+        <div class="container py-8 px-6 mx-auto">
+
+            <a class="uppercase tracking-wide no-underline hover:no-underline font-bold text-gray-800 text-xl mb-8" href="#">
+			About
+		</a>
+
+            <p class="mt-8 mb-8">Welcome to Smith and Shin, CPAs, LLC.  We provide tax services to individuals and businesses in various industries including real estate, manufacturing, and professional services.  We have experience preparing corporation, partnership, LLCs, trusts, and individual tax returns.
+        </div>
+
+    </section>
+    <section class="bg-white dark:bg-gray-900">
+  <div class="pb-8 px-4 mx-auto max-w-screen-xl lg:pb-16 lg:px-6 ">
+      <div class="mx-auto max-w-screen-sm text-center mb-8 lg:mb-16">
+          <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">Our Team</h2>
+          <p class="font-light text-gray-500 lg:mb-16 sm:text-xl dark:text-gray-400">Explore our tax professionals who get the job done</p>
+      </div> 
+      <div class="grid gap-8 mb-6 lg:mb-16">
+          <div class="items-center bg-gray-50 rounded-lg shadow sm:flex dark:bg-gray-800 dark:border-gray-700">
+              <a href="#">
+                  <img class="w-full md:w-1/2 rounded-lg sm:rounded-none sm:rounded-l-lg mx-auto" src="brandon_old.jpg" alt="Brandon Profile Picture">
+              </a>
+              <div class="p-5 md:w-1/2">
+                  <h3 class="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
+                      <a href="#">Brandon Smith</a>
+                  </h3>
+                  <span class="text-gray-500 dark:text-gray-400">Co-Owner CPA</span>
+                  <p class="mt-3 mb-4 font-light text-gray-500 dark:text-gray-400">CPA, MBA has almost twenty years of public accounting experience mostly with a Big Four national CPA firm before joining Smith and Shin, LLC.  He provides consulting, tax planning, and tax preparation for over three hundred clients in various industries including real estate, service, and manufacturing both nationwide and locally.  Brandon is certified in both North and South Carolina, and is a member of the American Institute of Certified Public Accountants. He earned a B.S. degree in financial accounting, cum laude, with a distinction in accounting, from the University of North Carolina at Asheville and a Masters in Business Administation from Appalachian State University.  He currently serves as the Treasurer for the Upstate Carolina's Real Estate Investors Association. </p>
+              </div>
+          </div> 
+          <div class="items-center bg-gray-50 rounded-lg shadow sm:flex dark:bg-gray-800 dark:border-gray-700">
+            <a href="#">
+                <img class="w-full md:w-1/2 rounded-lg sm:rounded-none sm:rounded-l-lg mx-auto" src="ki_iold.jpg" alt="Ki Profile Picture">
+            </a>
+            <div class="p-5 md:w-1/2">
+                <h3 class="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
+                    <a href="#">Ki Y. Shin</a>
+                </h3>
+                <span class="text-gray-500 dark:text-gray-400">Co-Owner CPA</span>
+                <p class="mt-3 mb-4 font-light text-gray-500 dark:text-gray-400">CPA, MST has over 30 years of public accounting experience.   He has worked for multiple Big Four national firms before joining Smith and Shin, LLC.   Ki was previously the tax manager for the largest real estate investment company in the nation.   He also has broad tax experience with all types of entities including corporations, partnerships, LLCs, and individuals.  Ki is certified in North and South Carolina, and is a member of the American Institute of Certified Public Accountants.  He earned his Masters in taxation degree from the University of South Carolina. </p>
+            </div>
+        </div> 
+      </div>  
+  </div>
+</section>
+
+    <footer class="container mx-auto bg-white py-8 border-t border-gray-400">
+        <div class="container flex px-3 py-8 ">
+            <div class="w-full mx-auto flex flex-wrap">
+                <div class="flex w-full lg:w-1/2 ">
+                    <div class="px-3 md:px-0">
+                        <p class="py-4">
+                            Copyright 2010-2023 Smith and Shin, LLC. All rights reserved.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
