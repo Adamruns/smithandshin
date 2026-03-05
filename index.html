@@ -1,183 +1,237 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Smith and Shin</title>
-    <meta name="description" content="Free open source Tailwind CSS Store template">
-    <meta name="keywords" content="tailwind,tailwindcss,tailwind css,css,starter template,free template,store template, shop layout, minimal, monochrome, minimalistic, theme, nordic">
-    
-    <link rel="stylesheet" href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css"/>
-	
-    <link href="https://fonts.googleapis.com/css?family=Work+Sans:200,400&display=swap" rel="stylesheet">
-
+    <title>Smith and Shin CPAs, LLC | Taylors, SC</title>
+    <meta name="description" content="Smith and Shin CPAs, LLC provides tax preparation, tax planning, and consulting services to individuals and businesses in Taylors, SC and nationwide.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: { 50: '#f0f4f8', 100: '#d9e2ec', 200: '#bcccdc', 300: '#9fb3c8', 400: '#829ab1', 500: '#627d98', 600: '#486581', 700: '#334e68', 800: '#243b53', 900: '#102a43' },
+                        gold: { 400: '#d4a855', 500: '#c9952c', 600: '#b8860b' },
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                        display: ['Playfair Display', 'Georgia', 'serif'],
+                    },
+                }
+            }
+        }
+    </script>
     <style>
-        .work-sans {
-            font-family: 'Work Sans', sans-serif;
-        }
-                
-        #menu-toggle:checked + #menu {
-            display: block;
-        }
-        
-        .hover\:grow {
-            transition: all 0.3s;
-            transform: scale(1);
-        }
-        
-        .hover\:grow:hover {
-            transform: scale(1.02);
-        }
-        
-        .carousel-open:checked + .carousel-item {
-            position: static;
-            opacity: 100;
-        }
-        
-        .carousel-item {
-            -webkit-transition: opacity 0.6s ease-out;
-            transition: opacity 0.6s ease-out;
-        }
-        
-        #carousel-1:checked ~ .control-1,
-        #carousel-2:checked ~ .control-2,
-        #carousel-3:checked ~ .control-3 {
-            display: block;
-        }
-        
-        .carousel-indicators {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            position: absolute;
-            bottom: 2%;
-            left: 0;
-            right: 0;
-            text-align: center;
-            z-index: 10;
-        }
-        
-        #carousel-1:checked ~ .control-1 ~ .carousel-indicators li:nth-child(1) .carousel-bullet,
-        #carousel-2:checked ~ .control-2 ~ .carousel-indicators li:nth-child(2) .carousel-bullet,
-        #carousel-3:checked ~ .control-3 ~ .carousel-indicators li:nth-child(3) .carousel-bullet {
-            color: #000;
-            /*Set to match the Tailwind colour you want the active one to be */
-        }
+        html { scroll-behavior: smooth; }
     </style>
-
 </head>
+<body class="bg-white text-gray-700 font-sans antialiased">
 
-<body class="bg-white text-gray-600 work-sans leading-normal text-base tracking-normal">
-
-    <!--Nav-->
-    <nav id="header" class="w-full z-30 top-0 py-1">
-        <div class="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 px-6 py-3">
-    
-            <label for="menu-toggle" class="cursor-pointer md:hidden block">
-                <svg class="fill-current text-gray-900" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
-                    <title>menu</title>
-                    <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
-                </svg>
-            </label>
-            <input class="hidden" type="checkbox" id="menu-toggle" />
-    
-            <div class="hidden md:flex md:items-center md:w-auto w-full order-3 md:order-1" id="menu">
-                <nav>
-                    <ul class="md:flex items-center justify-between text-base text-gray-700 pt-4 md:pt-0">
-                        <li><a class="inline-block no-underline hover:text-black hover:underline py-2 px-4" href="index.html">Home</a></li>
-                        <li><a class="inline-block no-underline hover:text-black hover:underline py-2 px-4" href="services.html">Services</a></li>
-                        <li><a class="inline-block no-underline hover:text-black hover:underline py-2 px-4" href="tax_tips.html">Tax Tips</a></li>
-                    </ul>
-                </nav>
-            </div>
-    
-            <div class="order-2 md:order-2 mx-auto">
-                <a class="flex items-center tracking-wide no-underline hover:no-underline font-bold text-gray-800 text-xl " href="#">
-                    Smith and Shin CPAs, LLC
+    <!-- Nav -->
+    <nav class="bg-navy-900 sticky top-0 z-50 shadow-lg">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            <div class="flex items-center justify-between h-16 md:h-20">
+                <a href="index.html" class="flex items-center gap-3 shrink-0">
+                    <div class="w-9 h-9 bg-gold-500 rounded-sm flex items-center justify-center">
+                        <span class="text-white font-bold text-sm">S&S</span>
+                    </div>
+                    <span class="text-white font-display text-lg md:text-xl font-semibold tracking-tight">Smith &amp; Shin</span>
                 </a>
+                <div class="hidden md:flex items-center gap-8">
+                    <a href="index.html" class="text-gold-400 text-sm font-medium tracking-wide uppercase">Home</a>
+                    <a href="services.html" class="text-navy-200 hover:text-white text-sm font-medium tracking-wide uppercase transition-colors">Services</a>
+                    <a href="tax_tips.html" class="text-navy-200 hover:text-white text-sm font-medium tracking-wide uppercase transition-colors">Tax Tips</a>
+                    <a href="#contact" class="bg-gold-500 hover:bg-gold-600 text-white text-sm font-semibold px-5 py-2.5 rounded transition-colors">Contact Us</a>
+                </div>
+                <button id="menu-btn" class="md:hidden text-white p-2" aria-label="Toggle menu">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+                </button>
             </div>
-    
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-navy-800 border-t border-navy-700">
+            <div class="px-4 py-3 space-y-2">
+                <a href="index.html" class="block text-gold-400 font-medium py-2 px-3 rounded">Home</a>
+                <a href="services.html" class="block text-navy-200 hover:text-white font-medium py-2 px-3 rounded hover:bg-navy-700 transition-colors">Services</a>
+                <a href="tax_tips.html" class="block text-navy-200 hover:text-white font-medium py-2 px-3 rounded hover:bg-navy-700 transition-colors">Tax Tips</a>
+                <a href="#contact" class="block bg-gold-500 hover:bg-gold-600 text-white font-semibold py-2.5 px-3 rounded text-center transition-colors mt-2">Contact Us</a>
+            </div>
         </div>
     </nav>
 
-
-<section class="w-full mx-auto bg-nordic-gray-light flex pt-12 md:pt-0 md:items-center bg-cover bg-right" style="max-width:1600px; height: 32rem; background-image: url(Screenshot\ 2023-05-15\ at\ 11.46.16\ AM.png);">
-
-	<div class="container mx-auto">
-
-		<div class="container mx-auto">
-            <div class="flex flex-col w-full lg:w-1/2 md:ml-16 items-center md:items-start px-6 tracking-wide">
-                <p class="text-white text-2xl my-4">4501 Old Spartanburg Road</p>
-                <p class="text-xl inline-block leading-relaxed text-white hover:border-white">Taylors, SC 29687</p>
+    <!-- Hero -->
+    <section class="relative bg-navy-900 overflow-hidden">
+        <div class="absolute inset-0">
+            <img src="office.png" alt="Smith and Shin office" class="w-full h-full object-cover opacity-30">
+        </div>
+        <div class="relative max-w-6xl mx-auto px-4 sm:px-6 py-24 md:py-36">
+            <p class="text-gold-400 font-medium tracking-widest uppercase text-sm mb-4">Certified Public Accountants</p>
+            <h1 class="font-display text-4xl md:text-5xl lg:text-6xl text-white font-bold leading-tight mb-6">
+                Trusted Tax Expertise<br class="hidden sm:block"> for Your Future
+            </h1>
+            <p class="text-navy-200 text-lg md:text-xl max-w-2xl mb-8 leading-relaxed">
+                Serving individuals and businesses in the Upstate South Carolina area and nationwide with over 50 years of combined experience.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4">
+                <a href="#contact" class="bg-gold-500 hover:bg-gold-600 text-white font-semibold px-8 py-3.5 rounded text-center transition-colors">Get in Touch</a>
+                <a href="services.html" class="border border-navy-300 text-navy-100 hover:bg-white/10 font-semibold px-8 py-3.5 rounded text-center transition-colors">Our Services</a>
             </div>
         </div>
-
-	  </div>
-
-</section>
-
-    <section class="bg-white py-8">
-
-        <div class="container py-8 px-6 mx-auto">
-
-            <a class="uppercase tracking-wide no-underline hover:no-underline font-bold text-gray-800 text-xl mb-8" href="#">
-			About
-		</a>
-
-            <p class="mt-8 mb-8">Welcome to Smith and Shin, CPAs, LLC.  We provide tax services to individuals and businesses in various industries including real estate, manufacturing, and professional services.  We have experience preparing corporation, partnership, LLCs, trusts, and individual tax returns.
-        </div>
-
     </section>
-    <section class="bg-white dark:bg-gray-900">
-  <div class="pb-8 px-4 mx-auto max-w-screen-xl lg:pb-16 lg:px-6 ">
-      <div class="mx-auto max-w-screen-sm text-center mb-8 lg:mb-16">
-          <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">Our Team</h2>
-          <p class="font-light text-gray-500 lg:mb-16 sm:text-xl dark:text-gray-400">Explore our tax professionals who get the job done</p>
-      </div> 
-      <div class="grid gap-8 mb-6 lg:mb-16">
-          <div class="items-center bg-gray-50 rounded-lg shadow sm:flex dark:bg-gray-800 dark:border-gray-700">
-              <a href="#">
-                  <img class="w-full md:w-1/2 rounded-lg sm:rounded-none sm:rounded-l-lg mx-auto" src="brandon_old.jpg" alt="Brandon Profile Picture">
-              </a>
-              <div class="p-5 md:w-1/2">
-                  <h3 class="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
-                      <a href="#">Brandon Smith</a>
-                  </h3>
-                  <span class="text-gray-500 dark:text-gray-400">Co-Owner CPA</span>
-                  <p class="mt-3 mb-4 font-light text-gray-500 dark:text-gray-400">CPA, MBA has almost twenty years of public accounting experience mostly with a Big Four national CPA firm before joining Smith and Shin, LLC.  He provides consulting, tax planning, and tax preparation for over three hundred clients in various industries including real estate, service, and manufacturing both nationwide and locally.  Brandon is certified in both North and South Carolina, and is a member of the American Institute of Certified Public Accountants. He earned a B.S. degree in financial accounting, cum laude, with a distinction in accounting, from the University of North Carolina at Asheville and a Masters in Business Administation from Appalachian State University.  He currently serves as the Treasurer for the Upstate Carolina's Real Estate Investors Association. </p>
-              </div>
-          </div> 
-          <div class="items-center bg-gray-50 rounded-lg shadow sm:flex dark:bg-gray-800 dark:border-gray-700">
-            <a href="#">
-                <img class="w-full md:w-1/2 rounded-lg sm:rounded-none sm:rounded-l-lg mx-auto" src="ki_iold.jpg" alt="Ki Profile Picture">
-            </a>
-            <div class="p-5 md:w-1/2">
-                <h3 class="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
-                    <a href="#">Ki Y. Shin</a>
-                </h3>
-                <span class="text-gray-500 dark:text-gray-400">Co-Owner CPA</span>
-                <p class="mt-3 mb-4 font-light text-gray-500 dark:text-gray-400">CPA, MST has over 30 years of public accounting experience.   He has worked for multiple Big Four national firms before joining Smith and Shin, LLC.   Ki was previously the tax manager for the largest real estate investment company in the nation.   He also has broad tax experience with all types of entities including corporations, partnerships, LLCs, and individuals.  Ki is certified in North and South Carolina, and is a member of the American Institute of Certified Public Accountants.  He earned his Masters in taxation degree from the University of South Carolina. </p>
-            </div>
-        </div> 
-      </div>  
-  </div>
-</section>
 
-    <footer class="container mx-auto bg-white py-8 border-t border-gray-400">
-        <div class="container flex px-3 py-8 ">
-            <div class="w-full mx-auto flex flex-wrap">
-                <div class="flex w-full lg:w-1/2 ">
-                    <div class="px-3 md:px-0">
-                        <p class="py-4">
-                            Copyright 2010-2023 Smith and Shin, LLC. All rights reserved.
+    <!-- About -->
+    <section class="py-16 md:py-24">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            <div class="max-w-3xl mx-auto text-center">
+                <p class="text-gold-500 font-medium tracking-widest uppercase text-sm mb-3">About Our Firm</p>
+                <h2 class="font-display text-3xl md:text-4xl text-navy-900 font-bold mb-6">Experience You Can Count On</h2>
+                <p class="text-gray-600 text-lg leading-relaxed">
+                    Welcome to Smith and Shin, CPAs, LLC. We provide tax services to individuals and businesses in various industries including real estate, manufacturing, and professional services. We have experience preparing corporation, partnership, LLCs, trusts, and individual tax returns.
+                </p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8 mt-16">
+                <div class="text-center p-6">
+                    <div class="w-14 h-14 bg-navy-50 rounded-lg flex items-center justify-center mx-auto mb-5">
+                        <svg class="w-7 h-7 text-navy-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+                    </div>
+                    <h3 class="font-semibold text-navy-900 text-lg mb-2">Tax Preparation</h3>
+                    <p class="text-gray-500 leading-relaxed">Accurate and timely preparation for individuals, corporations, partnerships, LLCs, and trusts.</p>
+                </div>
+                <div class="text-center p-6">
+                    <div class="w-14 h-14 bg-navy-50 rounded-lg flex items-center justify-center mx-auto mb-5">
+                        <svg class="w-7 h-7 text-navy-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg>
+                    </div>
+                    <h3 class="font-semibold text-navy-900 text-lg mb-2">Tax Planning</h3>
+                    <p class="text-gray-500 leading-relaxed">Strategic planning to minimize your tax burden and maximize your financial position year-round.</p>
+                </div>
+                <div class="text-center p-6">
+                    <div class="w-14 h-14 bg-navy-50 rounded-lg flex items-center justify-center mx-auto mb-5">
+                        <svg class="w-7 h-7 text-navy-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+                    </div>
+                    <h3 class="font-semibold text-navy-900 text-lg mb-2">Business Consulting</h3>
+                    <p class="text-gray-500 leading-relaxed">Expert guidance for businesses in real estate, manufacturing, and professional services industries.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team -->
+    <section class="bg-gray-50 py-16 md:py-24">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            <div class="text-center mb-16">
+                <p class="text-gold-500 font-medium tracking-widest uppercase text-sm mb-3">Our Team</p>
+                <h2 class="font-display text-3xl md:text-4xl text-navy-900 font-bold mb-4">Meet Our Professionals</h2>
+                <p class="text-gray-500 text-lg max-w-xl mx-auto">Experienced tax professionals dedicated to delivering exceptional results for every client.</p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-8 lg:gap-12">
+                <!-- Brandon -->
+                <div class="bg-white rounded-xl shadow-sm overflow-hidden border border-gray-100 hover:shadow-md transition-shadow">
+                    <div class="aspect-[4/3] overflow-hidden">
+                        <img src="brandon_old.jpg" alt="Brandon Smith, CPA" class="w-full h-full object-cover object-top">
+                    </div>
+                    <div class="p-6 md:p-8">
+                        <h3 class="font-display text-2xl text-navy-900 font-bold mb-1">Brandon Smith</h3>
+                        <p class="text-gold-500 font-medium text-sm tracking-wide uppercase mb-4">Co-Owner &middot; CPA, MBA</p>
+                        <p class="text-gray-600 leading-relaxed text-sm">
+                            Brandon has almost twenty years of public accounting experience mostly with a Big Four national CPA firm before joining Smith and Shin, LLC. He provides consulting, tax planning, and tax preparation for over three hundred clients in various industries including real estate, service, and manufacturing both nationwide and locally. Brandon is certified in both North and South Carolina, and is a member of the American Institute of Certified Public Accountants. He earned a B.S. degree in financial accounting, cum laude, with a distinction in accounting, from the University of North Carolina at Asheville and a Masters in Business Administration from Appalachian State University. He currently serves as the Treasurer for the Upstate Carolina's Real Estate Investors Association.
+                        </p>
+                    </div>
+                </div>
+                <!-- Ki -->
+                <div class="bg-white rounded-xl shadow-sm overflow-hidden border border-gray-100 hover:shadow-md transition-shadow">
+                    <div class="aspect-[4/3] overflow-hidden">
+                        <img src="ki_iold.jpg" alt="Ki Y. Shin, CPA" class="w-full h-full object-cover object-top">
+                    </div>
+                    <div class="p-6 md:p-8">
+                        <h3 class="font-display text-2xl text-navy-900 font-bold mb-1">Ki Y. Shin</h3>
+                        <p class="text-gold-500 font-medium text-sm tracking-wide uppercase mb-4">Co-Owner &middot; CPA, MST</p>
+                        <p class="text-gray-600 leading-relaxed text-sm">
+                            Ki has over 30 years of public accounting experience. He has worked for multiple Big Four national firms before joining Smith and Shin, LLC. Ki was previously the tax manager for the largest real estate investment company in the nation. He also has broad tax experience with all types of entities including corporations, partnerships, LLCs, and individuals. Ki is certified in North and South Carolina, and is a member of the American Institute of Certified Public Accountants. He earned his Masters in taxation degree from the University of South Carolina.
+                        </p>
                     </div>
                 </div>
             </div>
         </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="py-16 md:py-24">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            <div class="text-center mb-16">
+                <p class="text-gold-500 font-medium tracking-widest uppercase text-sm mb-3">Get in Touch</p>
+                <h2 class="font-display text-3xl md:text-4xl text-navy-900 font-bold mb-4">Contact Us</h2>
+                <p class="text-gray-500 text-lg max-w-xl mx-auto">We'd love to hear from you. Reach out to schedule a consultation.</p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-8 lg:gap-12">
+                <div class="bg-navy-900 rounded-xl p-8 md:p-10 text-white">
+                    <h3 class="font-display text-2xl font-bold mb-8">Office Information</h3>
+                    <div class="space-y-6">
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 bg-navy-800 rounded-lg flex items-center justify-center shrink-0 mt-0.5">
+                                <svg class="w-5 h-5 text-gold-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-sm uppercase tracking-wide text-navy-300 mb-1">Address</p>
+                                <p class="text-navy-100">4501 Old Spartanburg Road<br>Taylors, SC 29687</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 bg-navy-800 rounded-lg flex items-center justify-center shrink-0 mt-0.5">
+                                <svg class="w-5 h-5 text-gold-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-sm uppercase tracking-wide text-navy-300 mb-1">Hours</p>
+                                <p class="text-navy-100">Monday &ndash; Friday: 9:00 AM &ndash; 5:00 PM</p>
+                                <p class="text-navy-300 text-sm mt-1">Extended hours available during tax season</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="rounded-xl overflow-hidden border border-gray-200 shadow-sm">
+                    <img src="pic2.png" alt="Smith and Shin office exterior" class="w-full h-full object-cover min-h-[280px]">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-navy-900 text-navy-300">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 py-12">
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div>
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-8 h-8 bg-gold-500 rounded-sm flex items-center justify-center">
+                            <span class="text-white font-bold text-xs">S&S</span>
+                        </div>
+                        <span class="text-white font-display text-lg font-semibold">Smith &amp; Shin</span>
+                    </div>
+                    <p class="text-sm leading-relaxed">Certified Public Accountants serving the Upstate South Carolina community since 2010.</p>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="index.html" class="hover:text-white transition-colors">Home</a></li>
+                        <li><a href="services.html" class="hover:text-white transition-colors">Services</a></li>
+                        <li><a href="tax_tips.html" class="hover:text-white transition-colors">Tax Tips</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Location</h4>
+                    <p class="text-sm leading-relaxed">4501 Old Spartanburg Road<br>Taylors, SC 29687</p>
+                </div>
+            </div>
+            <div class="border-t border-navy-800 mt-10 pt-8 text-center text-sm">
+                <p>&copy; 2010&ndash;2026 Smith and Shin, CPAs, LLC. All rights reserved.</p>
+            </div>
+        </div>
     </footer>
 
+    <script>
+        document.getElementById('menu-btn').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+    </script>
 </body>
-
 </html>
