@@ -4,7 +4,7 @@ Website for Smith and Shin CPAs, LLC — my dad's CPA firm in Taylors, SC.
 
 ## Background
 
-The original site was hosted on Heroku with a PHP buildpack wrapper around static HTML. I transferred the `smithandshin.com` domain from the previous registrar over to Cloudflare, set up DNS, and migrated the hosting to Cloudflare Pages.
+I transferred the `smithandshin.com` domain from the previous registrar over to Cloudflare, set up DNS, and built the site on Cloudflare Pages.
 
 ## Hosting
 
